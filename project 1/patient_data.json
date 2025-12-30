@@ -1,0 +1,39 @@
+{
+  "patients": [
+    {
+      "patient_id": "P001",
+      "name": "Amit Sharma",
+      "age": 45,
+      "disease": "Diabetes",
+      "stage": "normal"
+    },
+    {
+      "patient_id": "P002",
+      "name": "Neha Verma",
+      "age": 32,
+      "disease": "Asthma",
+      "stage": "normal"
+    },
+    {
+      "patient_id": "P003",
+      "name": "Rahul Singh",
+      "age": 58,
+      "disease": "Heart Disease",
+      "stage": "critical"
+    },
+    {
+      "patient_id": "P004",
+      "name": "Priya Nair",
+      "age": 67,
+      "disease": "Pneumonia",
+      "stage": "critical"
+    },
+    {
+      "patient_id": "P005",
+      "name": "Suresh Patel",
+      "age": 41,
+      "disease": "Hypertension",
+      "stage": "normal"
+    }
+  ]
+}
