@@ -1,0 +1,1 @@
+# the scenario is like i've patients data ,,and i wanna fetch those data using fastapi , api route ,,on the other side dev will create frontend. while the data should be stored in db ,,but initially im using a json file to read , load and fetch the data.
