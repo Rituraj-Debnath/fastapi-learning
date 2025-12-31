@@ -33,7 +33,7 @@ def only(patient_id: str = Path(..., description="write patient id here", exampl
 #lets use query params ,that are optional key value pairs used for searching,sorting,filtering
 
 @app.get("/sort")
-def sort_patients(sort_by: str = Query(..., description="sort on the basis of name, age , height etc"), order : str = Query('ascending', description="query in ascending order optional")):
+def sort_patients(sort_by: str = Query(..., description="sort on the basis of name, age , height etc"), order : str = Query( 'ascending', description="query in ascending order optional")):
 
     load = p_data()
     valid_fields = ['age', 'bmi']
@@ -56,3 +56,12 @@ def sort_patients(sort_by: str = Query(..., description="sort on the basis of na
 # also used f string that prints the value inside {}:ex:
 # age = 24
 # print(f"age is {age}") instead of print("age is ", age)
+
+
+#mistakes & learning####
+
+# if i just remove the ascending defualt value from order : str = Query('ascending',  this Query
+# this 2nd parameter wil become required,,that means as no defualt value provided,without giving the order in the url (/query?sort_by=age) only , data will not found & 422 Unprocessable Entity error will occor. its not in the case of the 1st parameter because its defualt with ..., .also if i write the spelling wronng in the  order : str = Query('assscending'  ... only with the sort_by it will raise the exception , also become required and only work if given actual value in the url.
+
+# ***as according to python first paramater is always required with no defualt values accepted ,,but the wnd param is optional but needs default value.
+# like def func(a, b=10):,,, not (a=10,b)
