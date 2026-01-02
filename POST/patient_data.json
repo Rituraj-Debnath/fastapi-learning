@@ -1,0 +1,51 @@
+{
+    "001": {
+        "name": "Amit Sharma",
+        "age": 45,
+        "disease": "Diabetes",
+        "stage": "normal",
+        "bmi": 56
+    },
+    "002": {
+        "name": "Neha Verma",
+        "age": 32,
+        "disease": "Asthma",
+        "stage": "normal",
+        "bmi": 24
+    },
+    "003": {
+        "name": "Rahul Singh",
+        "age": 58,
+        "disease": "Heart Disease",
+        "stage": "critical",
+        "bmi": 30
+    },
+    "004": {
+        "name": "Priya Nair",
+        "age": 67,
+        "disease": "Pneumonia",
+        "stage": "critical",
+        "bmi": 18
+    },
+    "005": {
+        "name": "Suresh Patel",
+        "age": 41,
+        "disease": "Hypertension",
+        "stage": "normal",
+        "bmi": 28
+    },
+    "007": {
+        "name": "RiturajDebnath",
+        "age": 24,
+        "disease": "Completely fine just need a job",
+        "stage": "Isolated",
+        "bmi": 33.5
+    },
+    "008": {
+        "name": "Tony_Stark",
+        "age": 59,
+        "disease": "Infection from Paladium core",
+        "stage": "Mark 45",
+        "bmi": 35.5
+    }
+}
