@@ -34,13 +34,6 @@
         "stage": "normal",
         "bmi": 28
     },
-    "007": {
-        "name": "RiturajDebnath",
-        "age": 24,
-        "disease": "Completely fine just need a job",
-        "stage": "Isolated",
-        "bmi": 33.5
-    },
     "008": {
         "name": "Tony_Stark",
         "age": 59,

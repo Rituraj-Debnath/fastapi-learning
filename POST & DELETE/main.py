@@ -12,6 +12,10 @@ def load_data():
         data=json.load(file)
     return data
 
+def save_data(data):
+    with open("patient_data.json", "w") as f:
+        json.dump(data,f,indent=4)
+
 ### /home for getting all data.
 app = FastAPI()
 @app.get("/home")
@@ -45,14 +49,7 @@ def create_patient(validated_data : Patient):
     #adding new patient data
     data[validated_data.id] = validated_data.model_dump(exclude=["id"])
     
-
-    # a func to add new data to existing json file
-    def save_data(data):
-        with open("patient_data.json", "w") as f:
-            json.dump(data,f,indent=4) #indent =4 , means without this the json data will be dumpted as a single line without indentation.
-
     #saving into json file.
-
     save_data(data)
 
     #Returning a response 
@@ -60,5 +57,17 @@ def create_patient(validated_data : Patient):
 
     
 
+@app.delete("/delete/{patient_id}")
 
+def patient_delete(patient_id : str):
+    data = load_data()
+    
+    #checking if the patient exist or not for deletion
+    if patient_id not in data:
+        raise HTTPException(status_code=404, detail="Patient not found")
+    del data[patient_id]
+
+    save_data(data)
+
+    return JSONResponse(status_code=200, content={'message': 'patient deleted successfully'})
 
