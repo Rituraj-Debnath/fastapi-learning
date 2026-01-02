@@ -38,7 +38,7 @@ def create_patient(validated_data : Patient):
     # loading existing data
     data = load_data()
 
-    #checking if the data exist or not using patient id
+    #checking if the validated_data exist on the existing data or not using patient id
     if validated_data.id in data:
         raise HTTPException(status_code=403 , detail="Patient already exists")
     
@@ -49,7 +49,7 @@ def create_patient(validated_data : Patient):
     # a func to add new data to existing json file
     def save_data(data):
         with open("patient_data.json", "w") as f:
-            json.dump(data,f,indent=4) #indent =4 , means withouth this the json data will be dumpted as a single line without indentation.
+            json.dump(data,f,indent=4) #indent =4 , means without this the json data will be dumpted as a single line without indentation.
 
     #saving into json file.
 
