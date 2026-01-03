@@ -43,9 +43,6 @@ class validate_input(BaseModel):
         return self.weight/(self.height**2)
     
      @computed_field
-     @property 
-
-     @computed_field
      @property
      def lifestyle_risk(self) -> str:
         if self.smoker and self.bmi > 30:
@@ -75,6 +72,7 @@ class validate_input(BaseModel):
             return 2
         else:
             return 3
+     
         
 
 
